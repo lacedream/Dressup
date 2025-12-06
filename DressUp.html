@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dress up!</title>
+<link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/x-icon" href="Assets/Icon/ICON.ico">
+</head>
+
+<body> 
+
+    
+ <!-- OPTIONS-->
+    
+<div class="optionscontainer">
+
+<button onclick="refresh()" id="textButton" style="background-image: url('Assets/Icon/Reset.png')"></button>
+<button onclick="switchbg()" id="textButton" style="background-image: url('Assets/Icon/BG.png')"yle></button>
+<button onclick="switchFrontHair()" id="textButton" style="background-image: url('Assets/Icon/Front.png')"></button>
+<button onclick="switchBackHair()" id="textButton" style="background-image: url('Assets/Icon/Back.png')"></button>
+
+</div>
+
+    <div  id="epicbox">
+
+ <!-- base images-->
+<img id="base" class="base" src="Assets/base.png">
+
+
+ <!-- hair  images-->
+
+<img id="fronthair" class="base" src="Assets/front hair1.png" style="z-index: 7;">
+<img id="backhair" class="base" src="Assets/back hair1.png"style="z-index: -1;">
+
+ <!-- 
+<img id="hair2" class="base" src="Assets/front hair2.png" style="z-index: 6;">
+<img id="hair2" class="base" src="Assets/back hair2.png"style="z-index: -1;">-->
+
+
+ <!-- clothing images-->
+
+<img id="1" src="Assets/Item/1.png" class="clothing" style="z-index: 4;">
+<img id="2" src="Assets/Item/2.png" class="clothing" style="z-index: 4;">
+<img id="3" src="Assets/Item/3.png" class="clothing" style="z-index: 4;">
+<img id="4" src="Assets/Item/4.png" class="clothing" style="z-index: 6;">
+<img id="5" src="Assets/Item/5.png" class="clothing" style="z-index: 6;">
+<img id="6" src="Assets/Item/6.png" class="clothing" style="z-index: 4;">
+<img id="7" src="Assets/Item/7.png" class="clothing" style="z-index: 4;">
+<img id="8" src="Assets/Item/8.png" class="clothing" style="z-index: 4;">
+<img id="9" src="Assets/Item/9.png" class="clothing" style="z-index: 3;">
+<img id="10" src="Assets/Item/10.png" class="clothing" style="z-index: 3;">
+<img id="11" src="Assets/Item/11.png" class="clothing" style="z-index: 3;">
+<img id="12" src="Assets/Item/12.png" class="clothing" style="z-index: 3;">
+<img id="13" src="Assets/Item/13.png" class="clothing" style="z-index: 8;">
+<img id="14" src="Assets/Item/14.png" class="clothing" style="z-index: 8;">
+<img id="15" src="Assets/Item/15.png" class="clothing" style="z-index: 8;">
+<img id="16" src="Assets/Item/16.png" class="clothing" style="z-index: 7;">
+<img id="17" src="Assets/Item/17.png" class="clothing" style="z-index: 7;">
+<img id="18" src="Assets/Item/18.png" class="clothing" style="z-index: 7;">
+<img id="19" src="Assets/Item/19.png" class="clothing" style="z-index: 7;">
+<img id="20" src="Assets/Item/20.png" class="clothing" style="z-index: 7;">
+<img id="21" src="Assets/Item/21.png" class="clothing" style="z-index: 5;">
+<img id="22" src="Assets/Item/22.png" class="clothing" style="z-index: 8;">
+<img id="23" src="Assets/Item/23.png" class="clothing" style="z-index: 8;">
+<img id="24" src="Assets/Item/24.png" class="clothing" style="z-index: 5;">
+<img id="25" src="Assets/Item/25.png" class="clothing" style="z-index: 5;">
+<img id="26" src="Assets/Item/26.png" class="clothing" style="z-index: 4;">
+<img id="27" src="Assets/Item/27.png" class="clothing" style="z-index: 5;">
+<img id="28" src="Assets/Item/28.png" class="clothing" style="z-index: 5;">
+<img id="29" src="Assets/Item/29.png" class="clothing" style="z-index: 2;">
+<img id="30" src="Assets/Item/30.png" class="clothing" style="z-index: 2;">
+<img id="31" src="Assets/Item/31.png" class="clothing" style="z-index: 5;">
+<img id="32" src="Assets/Item/32.png" class="clothing" style="z-index: 5;">
+<img id="33" src="Assets/Item/33.png" class="clothing" style="z-index: 5;">
+<img id="34" src="Assets/Item/34.png" class="clothing" style="z-index: 3;">
+<img id="35" src="Assets/Item/35.png" class="clothing" style="z-index: 2;">
+<img id="36" src="Assets/Item/36.png" class="clothing" style="z-index: 2;">
+<img id="37" src="Assets/Item/37.png" class="clothing" style="z-index: 6;">
+<img id="38" src="Assets/Item/38.png" class="clothing" style="z-index: 6;">
+<img id="39" src="Assets/Item/39.png" class="clothing" style="z-index: 6;">
+<img id="40" src="Assets/Item/40.png" class="clothing" style="z-index: 6;">
+<img id="41" src="Assets/Item/41.png" class="clothing" style="z-index: 3;">
+<img id="42" src="Assets/Item/42.png" class="clothing" style="z-index: 6;">
+<img id="43" src="Assets/Item/43.png" class="clothing" style="z-index: 6;">
+<img id="44" src="Assets/Item/44.png" class="clothing" style="z-index: 6;">
+<img id="45" src="Assets/Item/45.png" class="clothing" style="z-index: 6;">
+
+
+ <!-- wardrobe buttons -->
+    <div class="topbar" style="
+    top: 5%;
+    left: 45%;
+    bottom: 90%;
+    right: 2%;"> </div>
+<div class="wardrobe">
+ 
+    <button onclick="toggleImage('1', this)" class="clothingButton" style="background-image: url('Assets/Thumb/1.png')">  </button>
+    <button onclick="toggleImage('2', this)" class="clothingButton" style="background-image: url('Assets/Thumb/2.png')">  </button>
+    <button onclick="toggleImage('3', this)" class="clothingButton" style="background-image: url('Assets/Thumb/3.png')">  </button>
+    <button onclick="toggleImage('4', this)" class="clothingButton" style="background-image: url('Assets/Thumb/4.png')">  </button>
+    <button onclick="toggleImage('5', this)" class="clothingButton" style="background-image: url('Assets/Thumb/5.png')">  </button>
+    <button onclick="toggleImage('6', this)" class="clothingButton" style="background-image: url('Assets/Thumb/6.png')">  </button>
+    <button onclick="toggleImage('7', this)" class="clothingButton" style="background-image: url('Assets/Thumb/7.png')">  </button>
+    <button onclick="toggleImage('8', this)" class="clothingButton" style="background-image: url('Assets/Thumb/8.png')">  </button>
+    <button onclick="toggleImage('9', this)" class="clothingButton" style="background-image: url('Assets/Thumb/9.png')">  </button>
+    <button onclick="toggleImage('10', this)" class="clothingButton" style="background-image: url('Assets/Thumb/10.png')">  </button>
+    <button onclick="toggleImage('11', this)" class="clothingButton" style="background-image: url('Assets/Thumb/11.png')">  </button>
+    <button onclick="toggleImage('12', this)" class="clothingButton" style="background-image: url('Assets/Thumb/12.png')">  </button>
+    <button onclick="toggleImage('13', this)" class="clothingButton" style="background-image: url('Assets/Thumb/13.png')">  </button>
+    <button onclick="toggleImage('14', this)" class="clothingButton" style="background-image: url('Assets/Thumb/14.png')">  </button>
+    <button onclick="toggleImage('15', this)" class="clothingButton" style="background-image: url('Assets/Thumb/15.png')">  </button>
+    <button onclick="toggleImage('16', this)" class="clothingButton" style="background-image: url('Assets/Thumb/16.png')">  </button>
+    <button onclick="toggleImage('17', this)" class="clothingButton" style="background-image: url('Assets/Thumb/17.png')">  </button>
+    <button onclick="toggleImage('18', this)" class="clothingButton" style="background-image: url('Assets/Thumb/18.png')">  </button>
+    <button onclick="toggleImage('19', this)" class="clothingButton" style="background-image: url('Assets/Thumb/19.png')">  </button>
+    <button onclick="toggleImage('20', this)" class="clothingButton" style="background-image: url('Assets/Thumb/20.png')">  </button>
+    <button onclick="toggleImage('21', this)" class="clothingButton" style="background-image: url('Assets/Thumb/21.png')">  </button>
+    <button onclick="toggleImage('22', this)" class="clothingButton" style="background-image: url('Assets/Thumb/22.png')">  </button>
+    <button onclick="toggleImage('23', this)" class="clothingButton" style="background-image: url('Assets/Thumb/23.png')">  </button>
+    <button onclick="toggleImage('24', this)" class="clothingButton" style="background-image: url('Assets/Thumb/24.png')">  </button>
+    <button onclick="toggleImage('25', this)" class="clothingButton" style="background-image: url('Assets/Thumb/25.png')">  </button>
+    <button onclick="toggleImage('26', this)" class="clothingButton" style="background-image: url('Assets/Thumb/26.png')">  </button>
+    <button onclick="toggleImage('27', this)" class="clothingButton" style="background-image: url('Assets/Thumb/27.png')">  </button>
+    <button onclick="toggleImage('28', this)" class="clothingButton" style="background-image: url('Assets/Thumb/28.png')">  </button>
+    <button onclick="toggleImage('29', this)" class="clothingButton" style="background-image: url('Assets/Thumb/29.png')">  </button>
+    <button onclick="toggleImage('30', this)" class="clothingButton" style="background-image: url('Assets/Thumb/30.png')">  </button>
+    <button onclick="toggleImage('31', this)" class="clothingButton" style="background-image: url('Assets/Thumb/31.png')">  </button>
+    <button onclick="toggleImage('32', this)" class="clothingButton" style="background-image: url('Assets/Thumb/32.png')">  </button>
+    <button onclick="toggleImage('33', this)" class="clothingButton" style="background-image: url('Assets/Thumb/33.png')">  </button>
+    <button onclick="toggleImage('34', this)" class="clothingButton" style="background-image: url('Assets/Thumb/34.png')">  </button>
+    <button onclick="toggleImage('35', this)" class="clothingButton" style="background-image: url('Assets/Thumb/35.png')">  </button>
+    <button onclick="toggleImage('36', this)" class="clothingButton" style="background-image: url('Assets/Thumb/36.png')">  </button>
+    <button onclick="toggleImage('37', this)" class="clothingButton" style="background-image: url('Assets/Thumb/37.png')">  </button>
+    <button onclick="toggleImage('38', this)" class="clothingButton" style="background-image: url('Assets/Thumb/38.png')">  </button>
+    <button onclick="toggleImage('39', this)" class="clothingButton" style="background-image: url('Assets/Thumb/39.png')">  </button>
+    <button onclick="toggleImage('40', this)" class="clothingButton" style="background-image: url('Assets/Thumb/40.png')">  </button>
+
+</div>
+
+ <!-- buttons -->
+
+</div>
+
+<div class= "bottomtext">
+<a class= "bottomtext" href = "https://www.instagram.com/lacedddream/">Made by LaceDream</a>
+</div>
+
+<script src="dressupcode.js"></script>
+</body>
+
+
