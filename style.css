@@ -8,7 +8,7 @@ background-repeat: no-repeat;}
     bottom: 11%;
     right: 22%;
     background-image: url(Assets/bg/1.png);
-    background-repeat:no-repeat;
+    background-repeat: repeat;
     background-size: 110%;
     background-position:center;
     background-color: rgb(255, 255, 255);
@@ -150,5 +150,6 @@ left: 20%;
     position:absolute;
     size: auto;
 }
+
 
 
